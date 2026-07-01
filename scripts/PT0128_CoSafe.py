@@ -34,11 +34,11 @@ for name in FILES:
                 continue
             rows.append({
                 "prompt": conv[-1]["content"],                     # final coreference user turn
-                "category": "PT01128 Multi-Turn Prompting",
+                "category": "PT0128 Multi-Turn Prompting",
                 "subcategory": subcategory,
                 "messages": json.dumps(conv, ensure_ascii=False),  # full history, ready to send
             })
 
 df_f = pd.DataFrame(rows, columns=["prompt", "category", "subcategory", "messages"])
-df_f.to_csv("formated_datasets/PT01128_CoSafe.csv", index=False)
+df_f.to_csv("formated_datasets/PT0128_CoSafe.csv", index=False)
 print(df_f.shape)   # (1400, 4)
