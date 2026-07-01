@@ -10,5 +10,5 @@ df["type"] = df["injection_type"]
 df["judge_question"] = df["judge_question"]
 
 df_f = df[["prompt", "system_prompt", "category", "subcategory", "type", "judge_question"]]
-df_f.to_csv("formated_datasets/PT0199_CyberSecEval4_prompt_injection_EN.csv")
+df_f.to_csv("formated_datasets/PT0199_CyberSecEval4_prompt_injection_EN.csv", index=False)
 print(df_f.shape)
