@@ -3,7 +3,7 @@ import pandas as pd
 df = pd.read_csv("source_datasets/harmbench_behaviors_text_all.csv")
 df = df[df["FunctionalCategory"] == "contextual"]
 df["prompt"] = df["ContextString"] + ' ' + df["Behavior"]
-df["category"] = "PT0001 Overt Instruction"
+df["category"] = "PT0001 Knowledge Integration Prompting"
 df["subcategory"] = df["SemanticCategory"]
 
 df_f = df[["prompt", "category", "subcategory"]]

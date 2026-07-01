@@ -8,8 +8,9 @@ df["system_prompt"] = df["test_case_prompt"]
 df["category"] = "PT0104 Natural Language Manipulation"
 df["subcategory"] = df["injection_variant"]
 df["type"] = df["injection_type"]
+df["judge_question"] = df["judge_question"]
 
-cols = ["prompt", "system_prompt", "category", "subcategory", "type"]
+cols = ["prompt", "system_prompt", "category", "subcategory", "type", "judge_question"]
 
 for lang, group in df.groupby("speaking_language"):
     safe = re.sub(r"[^A-Za-z0-9]+", "_", lang).strip("_")   # Filipino/Tagalog -> Filipino_Tagalog
