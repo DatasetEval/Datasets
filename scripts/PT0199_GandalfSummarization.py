@@ -7,7 +7,7 @@ dfval = pd.read_parquet("source_datasets/validation-00000-of-00001-c7b174a69fca3
 df = pd.concat([dftrain, dftest, dfval], ignore_index=True)
 
 df["prompt"] =  "Summarize this: " + df["text"]
-df["category"] = "PT0199 Textual BOundary Mimicry"
+df["category"] = "PT0199 Textual Boundary Mimicry"
 df["subcategory"] = "indirect prompt injection"
 
 df_weak = df[["prompt", "category", "subcategory"]].copy()
